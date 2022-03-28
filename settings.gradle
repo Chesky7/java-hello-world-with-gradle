@@ -17,3 +17,4 @@ include 'services:webservice'
 */
 
 rootProject.name = 'HelloWorld'
+org.gradle.java.home = /bin/java
