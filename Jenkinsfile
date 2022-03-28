@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Running build automation'
+                file: build/**/*
                 sh "chmod +x gradlew"
                 sh './gradlew build --no-daemon'
                 archiveArtifacts artifacts: 'target/*.jar'
