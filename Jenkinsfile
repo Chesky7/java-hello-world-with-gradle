@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("chesky1/hellojava")
+                    app = docker.build("chesky1/helloworld")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
