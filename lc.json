@@ -2,7 +2,7 @@
   "serviceName": "container-train-1",
   "containers": {
      "train": {
-        "image": "chesky1/hello-java:latest",
+        "image": "chesky1/helloworld:latest",
         "ports": {
            "8080": "HTTP"
         }
