@@ -1,0 +1,15 @@
+{
+  "serviceName": "container-train-1",
+  "containers": {
+     "train": {
+        "image": "chesky1/hello-java:latest",
+        "ports": {
+           "8080": "HTTP"
+        }
+     }
+  },
+  "publicEndpoint": {
+     "containerName": "train",
+     "containerPort": 8080
+  }
+}
