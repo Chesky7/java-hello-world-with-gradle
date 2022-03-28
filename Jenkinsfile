@@ -7,7 +7,7 @@ pipeline {
                 echo 'Running build automation'
                 sh "chmod +x gradlew"
                 sh './gradlew build --no-daemon'
-                archiveArtifacts artifacts: 'dist/hello-java.zip'
+                archiveArtifacts artifacts: 'dist/hellojava.zip'
             }
         }     
         stage('Build Docker Image') {
@@ -16,7 +16,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("chesky1/hello-java")
+                    app = docker.build("chesky1/hellojava")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
